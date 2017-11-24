@@ -1,18 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.gsrathoreniks.shadowexample.MainActivity">
 
-    <TextView
+    <com.gsrathoreniks.shadoweffect.ShadowLayout
+        android:id="@+id/shadowLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="16dp"
+        app:sl_shadow_angle="90"
+        app:sl_shadow_distance="5dp"
+        app:sl_shadow_radius="5dp"
+        app:sl_shadowed="true">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textColor="#f45"
+            android:textSize="50dp" />
+
+    </com.gsrathoreniks.shadoweffect.ShadowLayout>
+
+    <com.gsrathoreniks.shadoweffect.ShadowLayout
+        android:id="@+id/shadowLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/shadowLayout4"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        app:sl_shadow_angle="0"
+        app:sl_shadow_color="@color/colorPrimary"
+        app:sl_shadow_distance="10dp"
+        app:sl_shadow_radius="10dp"
+        app:sl_shadowed="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="world"
+            android:textColor="#d91c0e"
+            android:textSize="50dp" />
+
+    </com.gsrathoreniks.shadoweffect.ShadowLayout>
+
+    <com.gsrathoreniks.shadoweffect.ShadowLayout
+        android:id="@+id/shadowLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shadowLayout6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        app:sl_shadow_angle="0"
+        app:sl_shadow_color="@color/colorPrimary"
+        app:sl_shadow_distance="10dp"
+        app:sl_shadow_radius="10dp"
+        app:sl_shadowed="true">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
+
+    </com.gsrathoreniks.shadoweffect.ShadowLayout>
+
+    <com.gsrathoreniks.shadoweffect.ShadowLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="90dp"
+        app:sl_shadow_angle="0"
+        app:sl_shadow_color="#e040fb"
+        app:sl_shadow_distance="20dp"
+        app:sl_shadow_radius="10dp"
+        app:sl_shadowed="true">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#29b6f6"></LinearLayout>
+
+    </com.gsrathoreniks.shadoweffect.ShadowLayout>
+
+
+
+</RelativeLayout>
